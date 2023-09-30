@@ -22,7 +22,7 @@ namespace NguyenDinhLam_2122110509
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            view.Text = view.Text + "0";
+            view.Text += "0";
         }
 
         private void btn1_Click(object sender, EventArgs e)
