@@ -33,6 +33,7 @@
             this.btn03 = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btn04 = new System.Windows.Forms.Button();
+            this.btn05 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn01
@@ -85,11 +86,22 @@
             this.btn04.UseVisualStyleBackColor = true;
             this.btn04.Click += new System.EventHandler(this.btn04_Click);
             // 
+            // btn05
+            // 
+            this.btn05.Location = new System.Drawing.Point(154, 160);
+            this.btn05.Name = "btn05";
+            this.btn05.Size = new System.Drawing.Size(75, 23);
+            this.btn05.TabIndex = 5;
+            this.btn05.Text = "Combobox";
+            this.btn05.UseVisualStyleBackColor = true;
+            this.btn05.Click += new System.EventHandler(this.btn05_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn05);
             this.Controls.Add(this.btn04);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btn03);
@@ -108,5 +120,6 @@
         private System.Windows.Forms.Button btn03;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btn04;
+        private System.Windows.Forms.Button btn05;
     }
 }
