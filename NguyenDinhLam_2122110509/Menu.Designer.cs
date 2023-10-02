@@ -34,6 +34,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btn04 = new System.Windows.Forms.Button();
             this.btn05 = new System.Windows.Forms.Button();
+            this.btn06 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn01
@@ -96,11 +97,22 @@
             this.btn05.UseVisualStyleBackColor = true;
             this.btn05.Click += new System.EventHandler(this.btn05_Click);
             // 
+            // btn06
+            // 
+            this.btn06.Location = new System.Drawing.Point(290, 160);
+            this.btn06.Name = "btn06";
+            this.btn06.Size = new System.Drawing.Size(75, 23);
+            this.btn06.TabIndex = 6;
+            this.btn06.Text = "Casio";
+            this.btn06.UseVisualStyleBackColor = true;
+            this.btn06.Click += new System.EventHandler(this.btn06_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn06);
             this.Controls.Add(this.btn05);
             this.Controls.Add(this.btn04);
             this.Controls.Add(this.btnExit);
@@ -121,5 +133,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btn04;
         private System.Windows.Forms.Button btn05;
+        private System.Windows.Forms.Button btn06;
     }
 }

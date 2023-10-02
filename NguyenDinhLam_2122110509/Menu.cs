@@ -51,5 +51,11 @@ namespace NguyenDinhLam_2122110509
             Form5 objForm5 = new Form5();
             objForm5.ShowDialog();
         }
+
+        private void btn06_Click(object sender, EventArgs e)
+        {
+            Form6 objForm6 = new Form6();
+            objForm6.ShowDialog();
+        }
     }
 }
