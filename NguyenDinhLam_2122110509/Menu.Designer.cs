@@ -41,7 +41,7 @@
             this.btn01.Name = "btn01";
             this.btn01.Size = new System.Drawing.Size(75, 23);
             this.btn01.TabIndex = 0;
-            this.btn01.Text = "Bai01";
+            this.btn01.Text = "Login";
             this.btn01.UseVisualStyleBackColor = true;
             this.btn01.Click += new System.EventHandler(this.btn01_Click);
             // 
@@ -51,7 +51,7 @@
             this.btn02.Name = "btn02";
             this.btn02.Size = new System.Drawing.Size(75, 23);
             this.btn02.TabIndex = 1;
-            this.btn02.Text = "Bai02";
+            this.btn02.Text = "Demo";
             this.btn02.UseVisualStyleBackColor = true;
             this.btn02.Click += new System.EventHandler(this.btn02_Click);
             // 
@@ -61,7 +61,7 @@
             this.btn03.Name = "btn03";
             this.btn03.Size = new System.Drawing.Size(75, 23);
             this.btn03.TabIndex = 2;
-            this.btn03.Text = "Bai03";
+            this.btn03.Text = "caculator";
             this.btn03.UseVisualStyleBackColor = true;
             this.btn03.Click += new System.EventHandler(this.btn03_Click);
             // 
@@ -79,9 +79,9 @@
             // 
             this.btn04.Location = new System.Drawing.Point(572, 79);
             this.btn04.Name = "btn04";
-            this.btn04.Size = new System.Drawing.Size(75, 23);
+            this.btn04.Size = new System.Drawing.Size(105, 23);
             this.btn04.TabIndex = 4;
-            this.btn04.Text = "Bai04";
+            this.btn04.Text = "basic caculator";
             this.btn04.UseVisualStyleBackColor = true;
             this.btn04.Click += new System.EventHandler(this.btn04_Click);
             // 
