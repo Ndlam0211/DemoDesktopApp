@@ -35,6 +35,7 @@
             this.btn04 = new System.Windows.Forms.Button();
             this.btn05 = new System.Windows.Forms.Button();
             this.btn06 = new System.Windows.Forms.Button();
+            this.btn07 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn01
@@ -107,11 +108,22 @@
             this.btn06.UseVisualStyleBackColor = true;
             this.btn06.Click += new System.EventHandler(this.btn06_Click);
             // 
+            // btn07
+            // 
+            this.btn07.Location = new System.Drawing.Point(406, 160);
+            this.btn07.Name = "btn07";
+            this.btn07.Size = new System.Drawing.Size(126, 23);
+            this.btn07.TabIndex = 7;
+            this.btn07.Text = "Student Management";
+            this.btn07.UseVisualStyleBackColor = true;
+            this.btn07.Click += new System.EventHandler(this.btn07_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn07);
             this.Controls.Add(this.btn06);
             this.Controls.Add(this.btn05);
             this.Controls.Add(this.btn04);
@@ -134,5 +146,6 @@
         private System.Windows.Forms.Button btn04;
         private System.Windows.Forms.Button btn05;
         private System.Windows.Forms.Button btn06;
+        private System.Windows.Forms.Button btn07;
     }
 }
