@@ -118,7 +118,7 @@ namespace NguyenDinhLam_2122110509
                     if (dataGridStudent.Rows[i].Cells[1].Value.ToString().ToLower().Contains(value.ToLower()))
                     {
                         tmp.Add(students[i]);
-                    }
+                    }   
                 }
                 dataGridStudent.DataSource = null;
                 dataGridStudent.DataSource = tmp;
