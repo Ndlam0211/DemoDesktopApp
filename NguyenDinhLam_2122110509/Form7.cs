@@ -84,7 +84,7 @@ namespace NguyenDinhLam_2122110509
                 adress = txtAdress.Text;
                 Student student = new Student(id, name, cl, adress, grade);
                 students.Add(student);
-                dataGridStudent.DataSource = null;
+                //dataGridStudent.DataSource = null;
                 dataGridStudent.DataSource = students;
                 txtID.Text = null;
                 txtName.Text = null;
