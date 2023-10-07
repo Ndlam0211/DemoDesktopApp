@@ -23,19 +23,19 @@ namespace NguyenDinhLam_2122110509
         {
             if (string.IsNullOrWhiteSpace(txtID.Text))
             {
-                MessageBox.Show("You haven't entered your student id yet.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You haven't entered student id yet.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtID.Focus();
                 return false;
             }
             if (string.IsNullOrWhiteSpace(txtName.Text))
             {
-                MessageBox.Show("You haven't entered your name yet.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You haven't entered name yet.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtName.Focus();
                 return false;
             }
             if (string.IsNullOrWhiteSpace(txtGrade.Text))
             {
-                MessageBox.Show("You haven't entered your grade yet.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You haven't entered grade yet.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtGrade.Focus();
                 return false;
             }
@@ -49,17 +49,48 @@ namespace NguyenDinhLam_2122110509
                 int id;
                 string name;
                 float grade;
-                id = Int32.Parse(txtID.Text);
+                string cl;
+                string adress;
+                //if (!int.TryParse(txtID.Text, out id))
+                //{
+                //    MessageBox.Show("id must be a string of intergers", "notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    return;
+                //}
+                try
+                {
+                    id = Int32.Parse(txtID.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("id must be a string of intergers", "notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                try
+                {
+                    grade = float.Parse(txtGrade.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Grade must be a number", "notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (grade<0 || grade > 10)
+                {
+                    MessageBox.Show("Grade must from 0 to 10", "notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
                 name = txtName.Text;
-                grade = float.Parse(txtGrade.Text);
-                Student student = new Student(id, name, grade);
+                cl = txtClass.Text;
+                adress = txtAdress.Text;
+                Student student = new Student(id, name, cl, adress, grade);
                 students.Add(student);
-                dataGridStudent.DataSource = null;
+                //dataGridStudent.DataSource = null;
                 dataGridStudent.DataSource = students;
                 txtID.Text = null;
                 txtName.Text = null;
                 txtGrade.Text = null;
-
+                txtClass.Text = null;
+                txtAdress.Text = null;
             }
         }
 
@@ -72,6 +103,8 @@ namespace NguyenDinhLam_2122110509
             {
                 txtID.Text = students[index].ID.ToString();
                 txtName.Text = students[index].Name;
+                txtClass.Text = students[index].Class;
+                txtAdress.Text = students[index].Adress;
                 txtGrade.Text = students[index].Grade.ToString();
             }
         }
@@ -82,6 +115,8 @@ namespace NguyenDinhLam_2122110509
             {
                 students[index].ID = Int32.Parse(txtID.Text);
                 students[index].Name = txtName.Text;
+                students[index].Class = txtClass.Text;
+                students[index].Adress = txtAdress.Text;
                 students[index].Grade = float.Parse(txtGrade.Text);
                 dataGridStudent.DataSource = null;
                 dataGridStudent.DataSource = students;
@@ -135,19 +170,26 @@ namespace NguyenDinhLam_2122110509
         public int ID { set; get; }
         public string Name { set; get; }
         public float Grade { set; get; }
+        public string Class { set; get; }
+        public string Adress { set; get; }
+
 
         public Student()
         {
             ID = 0;
             Name = string.Empty;
             Grade = 0;
+            Class= string.Empty;
+            Adress = string.Empty;
         }
 
-        public Student(int id, string name, float grade)
+        public Student(int id, string name, string cl, string adress, float grade)
         {
             ID = id;
             Name = name;
             Grade = grade;
+            Class = cl;
+            Adress = adress;
         }
     }
 }

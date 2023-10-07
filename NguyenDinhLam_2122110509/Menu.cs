@@ -60,8 +60,8 @@ namespace NguyenDinhLam_2122110509
 
         private void btn07_Click(object sender, EventArgs e)
         {
-            Form7 objForm7 = new Form7();
-            objForm7.ShowDialog();
+            Form1 objForm1 = new Form1();
+            objForm1.ShowDialog();
         }
     }
 }

@@ -41,8 +41,14 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dataGridStudent = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtAdress = new System.Windows.Forms.TextBox();
+            this.txtClass = new System.Windows.Forms.TextBox();
             this.ColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColClass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAdress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColGrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStudent)).BeginInit();
             this.SuspendLayout();
@@ -110,14 +116,14 @@
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(496, 25);
+            this.txtName.Size = new System.Drawing.Size(386, 25);
             this.txtName.TabIndex = 5;
             // 
             // btnAdd
             // 
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(19, 161);
+            this.btnAdd.Location = new System.Drawing.Point(137, 348);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(69, 42);
@@ -130,7 +136,7 @@
             // 
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(108, 161);
+            this.btnEdit.Location = new System.Drawing.Point(237, 348);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(69, 42);
@@ -143,7 +149,7 @@
             // 
             this.btnDel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(197, 161);
+            this.btnDel.Location = new System.Drawing.Point(339, 348);
             this.btnDel.Margin = new System.Windows.Forms.Padding(4);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(88, 42);
@@ -156,7 +162,7 @@
             // 
             this.btnSort.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSort.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSort.Location = new System.Drawing.Point(307, 161);
+            this.btnSort.Location = new System.Drawing.Point(454, 348);
             this.btnSort.Margin = new System.Windows.Forms.Padding(4);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(69, 42);
@@ -169,7 +175,7 @@
             // 
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(404, 238);
+            this.btnSearch.Location = new System.Drawing.Point(13, 415);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(121, 42);
@@ -181,11 +187,11 @@
             // 
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(19, 238);
+            this.txtSearch.Location = new System.Drawing.Point(142, 415);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(357, 42);
+            this.txtSearch.Size = new System.Drawing.Size(381, 42);
             this.txtSearch.TabIndex = 11;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -195,14 +201,60 @@
             this.dataGridStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColID,
             this.ColName,
+            this.ColClass,
+            this.ColAdress,
             this.ColGrade});
-            this.dataGridStudent.Location = new System.Drawing.Point(16, 300);
+            this.dataGridStudent.Location = new System.Drawing.Point(17, 498);
             this.dataGridStudent.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridStudent.Name = "dataGridStudent";
             this.dataGridStudent.RowHeadersWidth = 51;
-            this.dataGridStudent.Size = new System.Drawing.Size(623, 239);
+            this.dataGridStudent.Size = new System.Drawing.Size(930, 239);
             this.dataGridStudent.TabIndex = 12;
             this.dataGridStudent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridStudent_CellClick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(13, 196);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 23);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Adress:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(13, 146);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 23);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Class:";
+            // 
+            // txtAdress
+            // 
+            this.txtAdress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAdress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdress.Location = new System.Drawing.Point(137, 197);
+            this.txtAdress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdress.Multiline = true;
+            this.txtAdress.Name = "txtAdress";
+            this.txtAdress.Size = new System.Drawing.Size(386, 87);
+            this.txtAdress.TabIndex = 15;
+            // 
+            // txtClass
+            // 
+            this.txtClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClass.Location = new System.Drawing.Point(137, 147);
+            this.txtClass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtClass.Multiline = true;
+            this.txtClass.Name = "txtClass";
+            this.txtClass.Size = new System.Drawing.Size(386, 25);
+            this.txtClass.TabIndex = 16;
             // 
             // ColID
             // 
@@ -220,6 +272,22 @@
             this.ColName.Name = "ColName";
             this.ColName.Width = 200;
             // 
+            // ColClass
+            // 
+            this.ColClass.DataPropertyName = "Class";
+            this.ColClass.HeaderText = "Class";
+            this.ColClass.MinimumWidth = 6;
+            this.ColClass.Name = "ColClass";
+            this.ColClass.Width = 150;
+            // 
+            // ColAdress
+            // 
+            this.ColAdress.DataPropertyName = "Adress";
+            this.ColAdress.HeaderText = "Adress";
+            this.ColAdress.MinimumWidth = 6;
+            this.ColAdress.Name = "ColAdress";
+            this.ColAdress.Width = 320;
+            // 
             // ColGrade
             // 
             this.ColGrade.DataPropertyName = "Grade";
@@ -232,7 +300,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 554);
+            this.ClientSize = new System.Drawing.Size(953, 750);
+            this.Controls.Add(this.txtClass);
+            this.Controls.Add(this.txtAdress);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridStudent);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);
@@ -272,8 +344,14 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridView dataGridStudent;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtAdress;
+        private System.Windows.Forms.TextBox txtClass;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColClass;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColAdress;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColGrade;
     }
 }
