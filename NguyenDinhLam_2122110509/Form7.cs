@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using Image = System.Drawing.Image;
 
 namespace NguyenDinhLam_2122110509
 {
@@ -94,10 +98,20 @@ namespace NguyenDinhLam_2122110509
                     MessageBox.Show("id must be a string of intergers", "notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
+
                 if (checkId())
                 {
                     return;
                 }
+
+                //Regex regex = new Regex(@"^[a-zA-zàáâãèéêìíòóôõùúûýýñç ]+$");
+                //if (!regex.IsMatch(txtName.Text))
+                //{
+                //    // Nếu sai thì in ra lỗi
+                //    MessageBox.Show("name must be alphabet and space", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return;
+                //}
+
                 try
                 {
                     grade = float.Parse(txtGrade.Text);
@@ -107,6 +121,7 @@ namespace NguyenDinhLam_2122110509
                     MessageBox.Show("Grade must be a number", "notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
+
                 if (grade<0 || grade > 10)
                 {
                     MessageBox.Show("Grade must from 0 to 10", "notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -142,6 +157,14 @@ namespace NguyenDinhLam_2122110509
                 txtClass.Text = students[index].Class;
                 txtAdress.Text = students[index].Adress;
                 txtGrade.Text = students[index].Grade.ToString();
+                //if (students[index].Image != null)
+                //{
+                //    ptrAvatar.Image = students[index].Image;
+                //}
+                //else
+                //{
+                //    ptrAvatar.Image = null;
+                //}
             }
         }
 
@@ -149,6 +172,10 @@ namespace NguyenDinhLam_2122110509
         {
             if (MessageBox.Show("do you certainly change?", "warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
+                if (checkId())
+                {
+                    return;
+                }
                 students[index].ID = Int32.Parse(txtID.Text);
                 students[index].Name = txtName.Text;
                 students[index].Class = txtClass.Text;
@@ -217,9 +244,37 @@ namespace NguyenDinhLam_2122110509
                 lockControl();
             }
         }
-        private void btnSelect_Click(object sender, EventArgs e)
-        {
+        //internal void AssignImage(Student student, Image image)
+        //{
+        //    student.Image = image;
+        //}
 
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you sure you want to exit?", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.None) == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
+
+        private void btnSelect_Click_1(object sender, EventArgs e)
+        {
+            ptrAvatar.SizeMode = PictureBoxSizeMode.StretchImage;
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Title = "Open Image";
+            dlg.Filter = "All Images (*.*)|*.*";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                FileInfo fileInfo = new FileInfo(dlg.FileName);
+                if (fileInfo.Length > 3 * 1024 * 1024) // 3MB
+                {
+                    // Display an error message
+                    MessageBox.Show("The file size is too large. Please upload a file under 3MB.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    return;
+                }
+                ptrAvatar.ImageLocation = dlg.FileName;
+                //AssignImage(students[index], ptrAvatar.Image);
+            }
         }
 
     }
@@ -230,6 +285,7 @@ namespace NguyenDinhLam_2122110509
         public float Grade { set; get; }
         public string Class { set; get; }
         public string Adress { set; get; }
+        //public Image Image { set; get; }
 
 
         public Student()

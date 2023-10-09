@@ -55,6 +55,7 @@ namespace NguyenDinhLam_2122110509
             this.label6 = new System.Windows.Forms.Label();
             this.ptrAvatar = new System.Windows.Forms.PictureBox();
             this.btnSelect = new System.Windows.Forms.Button();
+            this.btnQuit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptrAvatar)).BeginInit();
             this.SuspendLayout();
@@ -307,13 +308,26 @@ namespace NguyenDinhLam_2122110509
             this.btnSelect.TabIndex = 19;
             this.btnSelect.Text = "Select";
             this.btnSelect.UseVisualStyleBackColor = true;
-            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click_1);
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuit.Location = new System.Drawing.Point(445, 337);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(91, 34);
+            this.btnQuit.TabIndex = 20;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 609);
+            this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ptrAvatar);
@@ -372,5 +386,6 @@ namespace NguyenDinhLam_2122110509
         private System.Windows.Forms.PictureBox ptrAvatar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.Button btnQuit;
     }
 }

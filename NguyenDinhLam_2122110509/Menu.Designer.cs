@@ -36,6 +36,9 @@
             this.btn05 = new System.Windows.Forms.Button();
             this.btn06 = new System.Windows.Forms.Button();
             this.btn07 = new System.Windows.Forms.Button();
+            this.btnTimer = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn01
@@ -70,7 +73,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(352, 213);
+            this.btnExit.Location = new System.Drawing.Point(368, 272);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 3;
@@ -118,11 +121,44 @@
             this.btn07.UseVisualStyleBackColor = true;
             this.btn07.Click += new System.EventHandler(this.btn07_Click);
             // 
+            // btnTimer
+            // 
+            this.btnTimer.Location = new System.Drawing.Point(587, 160);
+            this.btnTimer.Name = "btnTimer";
+            this.btnTimer.Size = new System.Drawing.Size(75, 23);
+            this.btnTimer.TabIndex = 8;
+            this.btnTimer.Text = "Timer";
+            this.btnTimer.UseVisualStyleBackColor = true;
+            this.btnTimer.Click += new System.EventHandler(this.btnTimer_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(154, 225);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "RichTexBox";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(290, 225);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "PictureBox";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnTimer);
             this.Controls.Add(this.btn07);
             this.Controls.Add(this.btn06);
             this.Controls.Add(this.btn05);
@@ -147,5 +183,8 @@
         private System.Windows.Forms.Button btn05;
         private System.Windows.Forms.Button btn06;
         private System.Windows.Forms.Button btn07;
+        private System.Windows.Forms.Button btnTimer;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

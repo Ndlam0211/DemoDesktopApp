@@ -63,5 +63,23 @@ namespace NguyenDinhLam_2122110509
             Form1 objForm1 = new Form1();
             objForm1.ShowDialog();
         }
+
+        private void btnTimer_Click(object sender, EventArgs e)
+        {
+            Form8 objForm8 = new Form8();
+            objForm8.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form9 objForm9 = new Form9();  
+            objForm9.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form10 objForm10 = new Form10();   
+            objForm10.ShowDialog();
+        }
     }
 }
