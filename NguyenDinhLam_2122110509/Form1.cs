@@ -17,7 +17,7 @@ namespace NguyenDinhLam_2122110509
         {
             InitializeComponent();
         }
-        public bool Check()
+        public bool CheckData()
         {
             String strUserName = txtUserName.Text;
             String strPassword = txtPassword.Text;
@@ -33,25 +33,24 @@ namespace NguyenDinhLam_2122110509
                 txtPassword.Focus();
                 return false;
             }
-            if (strUserName != "lamnd" || strPassword != "lam021103")
+            if ((strUserName != "lamnd" || strPassword != "lam021103") && (strUserName != "user1" || strPassword != "123456789"))
             {
                 MessageBox.Show("UserName or Password not true", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
+            if (strUserName == "lamnd" && strPassword == "lam021103")
+                Form7.permisson = "Admin";
+            else Form7.permisson = "User";
             return true;
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
-            if (Check())
+            if (CheckData())
             {
-                MessageBox.Show("Login success, welcome back lamnd", "Notification", MessageBoxButtons.OK, MessageBoxIcon.None);
                 Form7 objForm7 = new Form7();
                 objForm7.ShowDialog();
                 this.Close();
             }
-            //String strUserName = txtUserName.Text;
-            //MessageBox.Show("Welcome back " + strUserName);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

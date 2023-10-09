@@ -1,4 +1,6 @@
-﻿namespace NguyenDinhLam_2122110509
+﻿using NguyenDinhLam_2122110509.Properties;
+
+namespace NguyenDinhLam_2122110509
 {
     partial class Form7
     {
@@ -41,15 +43,15 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dataGridStudent = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtAdress = new System.Windows.Forms.TextBox();
-            this.txtClass = new System.Windows.Forms.TextBox();
             this.ColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColClass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAdress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColGrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtAdress = new System.Windows.Forms.TextBox();
+            this.txtClass = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStudent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,7 +90,6 @@
             // 
             // txtID
             // 
-            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(137, 16);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
@@ -99,7 +100,6 @@
             // 
             // txtGrade
             // 
-            this.txtGrade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGrade.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrade.Location = new System.Drawing.Point(137, 97);
             this.txtGrade.Margin = new System.Windows.Forms.Padding(4);
@@ -110,7 +110,6 @@
             // 
             // txtName
             // 
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(137, 55);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
@@ -185,7 +184,6 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(142, 415);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
@@ -211,50 +209,6 @@
             this.dataGridStudent.Size = new System.Drawing.Size(930, 239);
             this.dataGridStudent.TabIndex = 12;
             this.dataGridStudent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridStudent_CellClick);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 196);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 23);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Adress:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 146);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 23);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Class:";
-            // 
-            // txtAdress
-            // 
-            this.txtAdress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAdress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdress.Location = new System.Drawing.Point(137, 197);
-            this.txtAdress.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAdress.Multiline = true;
-            this.txtAdress.Name = "txtAdress";
-            this.txtAdress.Size = new System.Drawing.Size(386, 87);
-            this.txtAdress.TabIndex = 15;
-            // 
-            // txtClass
-            // 
-            this.txtClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtClass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClass.Location = new System.Drawing.Point(137, 147);
-            this.txtClass.Margin = new System.Windows.Forms.Padding(4);
-            this.txtClass.Multiline = true;
-            this.txtClass.Name = "txtClass";
-            this.txtClass.Size = new System.Drawing.Size(386, 25);
-            this.txtClass.TabIndex = 16;
             // 
             // ColID
             // 
@@ -296,6 +250,48 @@
             this.ColGrade.Name = "ColGrade";
             this.ColGrade.Width = 125;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(13, 196);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 23);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Adress:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(13, 146);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 23);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Class:";
+            // 
+            // txtAdress
+            // 
+            this.txtAdress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdress.Location = new System.Drawing.Point(137, 197);
+            this.txtAdress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdress.Multiline = true;
+            this.txtAdress.Name = "txtAdress";
+            this.txtAdress.Size = new System.Drawing.Size(386, 87);
+            this.txtAdress.TabIndex = 15;
+            // 
+            // txtClass
+            // 
+            this.txtClass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClass.Location = new System.Drawing.Point(137, 147);
+            this.txtClass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtClass.Multiline = true;
+            this.txtClass.Name = "txtClass";
+            this.txtClass.Size = new System.Drawing.Size(386, 25);
+            this.txtClass.TabIndex = 16;
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -320,7 +316,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form7";
-            this.Text = "Student Management";
+            this.Load += new System.EventHandler(this.Form7_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStudent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

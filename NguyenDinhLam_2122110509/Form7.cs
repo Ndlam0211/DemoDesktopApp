@@ -19,6 +19,14 @@ namespace NguyenDinhLam_2122110509
             students = new List<Student>();
         }
 
+        public void lockControl()
+        {
+            btnAdd.Enabled = false;
+            btnEdit.Enabled = false;
+            btnDel.Enabled = false;
+            btnSort.Enabled = false;
+        }
+
         public bool CheckControl()
         {
             if (string.IsNullOrWhiteSpace(txtID.Text))
@@ -40,6 +48,27 @@ namespace NguyenDinhLam_2122110509
                 return false;
             }
             return true;
+        }
+
+        public bool checkId()
+        {
+            int id = int.Parse(txtID.Text);
+
+            bool isExist = false;
+            for (int i = 0; i < students.Count; i++)
+            {
+                if (students[i].ID == id)
+                {
+                    isExist = true;
+                    break;
+                }
+            }
+
+            if (isExist)
+            {
+                MessageBox.Show("ID already exists.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return isExist;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -65,6 +94,10 @@ namespace NguyenDinhLam_2122110509
                     MessageBox.Show("id must be a string of intergers", "notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
+                if (checkId())
+                {
+                    return;
+                }
                 try
                 {
                     grade = float.Parse(txtGrade.Text);
@@ -79,18 +112,21 @@ namespace NguyenDinhLam_2122110509
                     MessageBox.Show("Grade must from 0 to 10", "notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
+
                 name = txtName.Text;
                 cl = txtClass.Text;
                 adress = txtAdress.Text;
                 Student student = new Student(id, name, cl, adress, grade);
                 students.Add(student);
-                //dataGridStudent.DataSource = null;
-                dataGridStudent.DataSource = students;
+
                 txtID.Text = null;
                 txtName.Text = null;
                 txtGrade.Text = null;
                 txtClass.Text = null;
                 txtAdress.Text = null;
+
+                dataGridStudent.DataSource = null;
+                dataGridStudent.DataSource = students;
             }
         }
 
@@ -99,7 +135,7 @@ namespace NguyenDinhLam_2122110509
         private void dataGridStudent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             index = e.RowIndex;
-            if (index>=0)
+            if (index >=0)
             {
                 txtID.Text = students[index].ID.ToString();
                 txtName.Text = students[index].Name;
@@ -111,7 +147,7 @@ namespace NguyenDinhLam_2122110509
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (index>=0)
+            if (MessageBox.Show("do you certainly change?", "warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 students[index].ID = Int32.Parse(txtID.Text);
                 students[index].Name = txtName.Text;
@@ -128,6 +164,11 @@ namespace NguyenDinhLam_2122110509
             if (MessageBox.Show("do you certainly remove?", "warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 students.RemoveAt(index);
+                txtID.Text = null;
+                txtName.Text = null;
+                txtGrade.Text = null;
+                txtClass.Text = null;
+                txtAdress.Text = null;
                 dataGridStudent.DataSource = null;
                 dataGridStudent.DataSource = students;
             }
@@ -163,6 +204,23 @@ namespace NguyenDinhLam_2122110509
                 dataGridStudent.DataSource = null;
                 dataGridStudent.DataSource = students;
             }
+        }
+
+        public static String permisson;
+        private void Form7_Load(object sender, EventArgs e)
+        {
+            if (Form7.permisson == "Admin")
+                MessageBox.Show("Login success, welcome back lamnd (quyền Admin)", "Notification", MessageBoxButtons.OK, MessageBoxIcon.None);
+            else
+            {
+                MessageBox.Show("Login success, welcome back user1 (quyền User)", "Notification", MessageBoxButtons.OK, MessageBoxIcon.None);
+                lockControl();
+            }
+        }
+
+        private void btnImage_Click(object sender, EventArgs e)
+        {
+
         }
     }
     class Student
