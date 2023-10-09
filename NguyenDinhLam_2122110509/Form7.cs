@@ -210,18 +210,18 @@ namespace NguyenDinhLam_2122110509
         private void Form7_Load(object sender, EventArgs e)
         {
             if (Form7.permisson == "Admin")
-                MessageBox.Show("Login success, welcome back lamnd (quyền Admin)", "Notification", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show("Login success, welcome back lamnd (Admin)", "Notification", MessageBoxButtons.OK, MessageBoxIcon.None);
             else
             {
-                MessageBox.Show("Login success, welcome back user1 (quyền User)", "Notification", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show("Login success, welcome back user1 (User)", "Notification", MessageBoxButtons.OK, MessageBoxIcon.None);
                 lockControl();
             }
         }
-
-        private void btnImage_Click(object sender, EventArgs e)
+        private void btnSelect_Click(object sender, EventArgs e)
         {
 
         }
+
     }
     class Student
     {
